@@ -95,6 +95,10 @@ async function run() {
       return email;
 }
 
+app.get('/gadget', (req, res){
+  res.send(' Gadget is here.')
+})
+
 app.get('/', (req, res) => {
   res.send('Gadget freak is running')
 })
