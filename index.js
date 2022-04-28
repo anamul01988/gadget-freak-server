@@ -6,7 +6,7 @@ app.use(express.json())
 require('dotenv').config();
 const jwt = require('jsonwebtoken');
 
-const port = 5000
+const port =process.env.PORT || 5000;
 
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
@@ -96,7 +96,7 @@ async function run() {
 }
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Gadget freak is running')
 })
 
 app.listen(port, () => {
